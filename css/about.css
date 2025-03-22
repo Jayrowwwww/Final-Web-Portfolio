@@ -44,9 +44,10 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
+    height: 50px;
     border-radius: 10px 10px 0 0;
-    background-color: white;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    background-color: rgb(226, 226, 226);
     padding: 0 20px;
 }
 
@@ -55,8 +56,8 @@ main{
     justify-content: center;
     align-items: center;
     background-color: red;
-    height: 20px;
-    width: 20px;
+    height: 17px;
+    width: 17px;
     border-radius: 100px;
     color: white;
 }
@@ -72,11 +73,17 @@ main{
     backdrop-filter: blur(20px);
     width: 100%;
     height: 80vh;
-    padding: 0 50px;
 }
 
 .text{
-    padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-right: 1px solid rgba(255, 255, 255, 0.555);
+    width: 100rem;
+    height: 46rem;
+    padding: 0 5rem 0 3rem;
 }
 
 .text h1{
@@ -92,11 +99,15 @@ main{
 
 
 /* sidebar */
-.details{
+.details, .details a{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.details{
+    flex-direction: column;
+    padding: 0 5rem;
 }
 
 .details img{
@@ -106,30 +117,25 @@ main{
     border: 1px solid black;
 }
 
-.details h1{
-    font-weight: 700;
-    margin-bottom: 20px;
+.details a{
+    background-color: rgb(212, 212, 212);
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
 }
 
-.details ul{
-    display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: repeat(2, 40px);
-    grid-gap: 20px;
-}
-
-.details li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: grey;
+.details a:active{
+    background-color: black;
     color: white;
-    transition: all 0.1s ease-in;
 }
 
-.details li:hover{
-    background-color: rgb(199, 198, 198);
+.details a:hover{
+    text-decoration: underline;
 }
+
 
 /* footer */
 .foot{

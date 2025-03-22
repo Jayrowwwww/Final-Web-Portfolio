@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: karla;
+    outline: none;
+    user-select: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.back{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+}
+
+
+/* background */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 98vh;
+    background-image: url(/imgs/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+/* container */
+.content, .title-bar, .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    gap: 5em;
+    overflow-y: hidden;
+
+    padding: 0 50px;
+}
+
+.container{
+    justify-content: flex-start;
+    flex-direction: column;
+    border: 1px solid rgb(136, 136, 136);
+    background-color: rgba(255, 255, 255, 0.411);
+    backdrop-filter: blur(20px);
+    width: 31.4rem;
+    height: 37rem;
+    border-radius: 10px;
+}
+
+.title-bar{
+    width: 31.3rem;
+    height: 30px;
+    background-color: rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(136, 136, 136);
+    border-radius: 10px 10px 0 0;
+}
+
+.content{
+    padding-top: 10px;
+}
+
+.content .gif{
+    height: 250px;
+}
+
+.content .pb{
+    height: 300px;
+}
