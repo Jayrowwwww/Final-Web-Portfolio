@@ -36,8 +36,8 @@ header{
     font-weight: 500;
 }
 
-/* center nav */
-nav ul{
+/* upper nav */
+nav, nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +45,32 @@ nav ul{
     gap: 50px;
 }
 
+/* socmed logo */
+.socials {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;  
+    padding: 20px 0;
+}
+
+.socials a {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socials a img {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+/* socials logo hover */
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+/* underline hover */
 nav ul li{
     transition: all 0.2s ease-in;
 }
@@ -98,31 +124,58 @@ nav ul li:hover{
 }
 
 /* bottom navbar */
-.navbar{
+.navbar, .nav-logo, .nav-logo p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
+.navbar{
     background-color: rgba(255, 255, 255, 0.548);
     backdrop-filter: blur(10px);
-    width: 50%;
+    width: 60rem;
     height: 80px;
     padding: 0 60px;
     border: none;
     border-radius: 10px;
+}
+
+.navbar a{
     position: relative;
 }
 
+.navbar a::after {
+    content: attr(data-tooltip); /* Use the value of the data-tooltip attribute */
+    position: absolute;
+    bottom: 0; /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(65, 65, 65, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip visible on hover */
+.navbar a:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* customize img size */
 .navbar img{
     height: 70px;
     border-radius: 100px;
     transition: all 0.2s ease-in;
 }
 
-.mr-diy-logo img{
-    width: 100px;
-}
-
 .navbar img:hover{
-    transform: translateY(-10%);
+    transform: translateY(-25%);
 }
