@@ -147,7 +147,7 @@ nav ul li:hover{
 .navbar a::after {
     content: attr(data-tooltip); /* Use the value of the data-tooltip attribute */
     position: absolute;
-    bottom: 0; /* Position the tooltip above the element */
+    bottom: 0; 
     left: 50%;
     transform: translateX(-50%);
     visibility: hidden;
